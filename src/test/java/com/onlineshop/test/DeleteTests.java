@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class DeleteTests extends TestBase{
     @BeforeMethod
     public void precondition(){
-        driver.findElement(By.cssSelector("[href=\"/login\"]")).click();
+        clickOnLoginLink();
         type(By.xpath("(//input[@id='Email'])[1]"), "Joeblack@email.com");
         type(By.xpath("(//input[@id='Password'])[1]"), "Joeblack1234.");
         driver.findElement(By.cssSelector("input[value='Log in']")).click();

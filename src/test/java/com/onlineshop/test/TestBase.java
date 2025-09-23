@@ -42,4 +42,35 @@ public class TestBase {
     public void click(By locator) {
         driver.findElement(locator);
     }
+
+    public void clickOnRegistrationButton() {
+        driver.findElement(By.cssSelector("[id=\"register-button\"]")).click();
+    }
+
+    public void fillRegisterLoginForm(String email, String password, String firsName, String lastName) {
+        driver.findElement(By.cssSelector("[id=\"gender-male\"]")).click(); //выбор гендера
+
+        type(By.cssSelector("[id$='FirstName']"), firsName);
+
+        type(By.cssSelector("[id=\"LastName\"]"), lastName);
+
+        type(By.cssSelector("[id=\"Email\"]"), email);
+
+
+        type(By.cssSelector("[id=\"Password\"]"), password);
+
+        type(By.cssSelector("[id=\"ConfirmPassword\"]"), password);
+    }
+
+    public void clickOnRegistrationLink() {
+        driver.findElement(By.cssSelector("[href='/register']")).click();
+    }
+
+    public boolean isSignOutButton() {
+        return elementPresent(By.xpath("//a[normalize-space()='Log out']"));
+    }
+
+    public void clickOnLoginLink() {
+        driver.findElement(By.cssSelector("[href=\"/login\"]")).click();
+    }
 }
