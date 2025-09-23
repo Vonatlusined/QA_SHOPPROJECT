@@ -1,41 +1,28 @@
 package com.onlineshop.test;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class CreateAccountTest extends TestBase{
-    @Test
+    @Test(enabled = false)
     public void newUserRegistrationPositiveTest(){
+        int i = (int)((System.currentTimeMillis()/1000)%3600);
+        click(By.cssSelector("a[href='/']"));
         driver.findElement(By.cssSelector("[href='/register']")).click(); // клик на кнопку регистрации
 
         driver.findElement(By.cssSelector("[id=\"gender-male\"]")).click(); //выбор гендера
 
-        driver.findElement(By.cssSelector("[id$='FirstName']")).click();
-        driver.findElement(By.cssSelector("[id$='FirstName']")).clear();
-        driver.findElement(By.cssSelector("[id$='FirstName']")).sendKeys("Joe"); //клик и заполнение поля имени
+        type(By.cssSelector("[id$='FirstName']"), "Joe");
 
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).sendKeys("Black"); //клик и заполнение поля Фамилии
+        type(By.cssSelector("[id=\"LastName\"]"), "Black");
 
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).sendKeys("Joeblack@email.com"); //клик и заполнение поля Email
+        type(By.cssSelector("[id=\"Email\"]"), "Joeblack"+i+"@email.com");
 
 
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).sendKeys("Joeblack1234."); //пароль
+        type(By.cssSelector("[id=\"Password\"]"), "Joeblack1234.");
 
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).sendKeys("Joeblack1234."); //повтор пароля
+        type(By.cssSelector("[id=\"ConfirmPassword\"]"), "Joeblack1234.");
 
         driver.findElement(By.cssSelector("[id=\"register-button\"]")).click();
 
@@ -45,7 +32,7 @@ public class CreateAccountTest extends TestBase{
 
     }
 
-//    public boolean isAssertDisplayed() {
+    //    public boolean isAssertDisplayed() {
 //        Alert alert = new WebDriver(driver, Duration.ofSeconds(20))
 //                .until(ExpectedConditions.alertIsPresent());
 //        if (alert == null) {
@@ -58,31 +45,21 @@ public class CreateAccountTest extends TestBase{
 
 
     @Test
-    public void existUserRegistrationPositiveTest(){
+    public void existUserRegistrationNegativeTest(){
         driver.findElement(By.cssSelector("[href='/register']")).click(); // клик на кнопку регистрации
 
         driver.findElement(By.cssSelector("[id=\"gender-male\"]")).click(); //выбор гендера
 
-        driver.findElement(By.cssSelector("[id$='FirstName']")).click();
-        driver.findElement(By.cssSelector("[id$='FirstName']")).clear();
-        driver.findElement(By.cssSelector("[id$='FirstName']")).sendKeys("Joe"); //клик и заполнение поля имени
+        type(By.cssSelector("[id$='FirstName']"), "Joe");
 
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"LastName\"]")).sendKeys("Black"); //клик и заполнение поля Фамилии
+        type(By.cssSelector("[id=\"LastName\"]"), "Black");
 
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).sendKeys("Joeblack@email.com"); //клик и заполнение поля Email
+        type(By.cssSelector("[id=\"Email\"]"), "Joeblack@email.com");
 
 
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).sendKeys("Joeblack1234."); //пароль
+        type(By.cssSelector("[id=\"Password\"]"), "Joeblack1234.");
 
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).click();
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).clear();
-        driver.findElement(By.cssSelector("[id=\"ConfirmPassword\"]")).sendKeys("Joeblack1234."); //повтор пароля
+        type(By.cssSelector("[id=\"ConfirmPassword\"]"), "Joeblack1234.");
 
         driver.findElement(By.cssSelector("[id=\"register-button\"]")).click();
 

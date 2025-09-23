@@ -8,13 +8,9 @@ public class LoginTest extends TestBase{
     @Test
     public void existLoginTest () {
         driver.findElement(By.cssSelector("[href=\"/login\"]")).click();
-        driver.findElement(By.xpath("(//input[@id='Email'])[1]")).click();
-        driver.findElement(By.xpath("(//input[@id='Email'])[1]")).clear();
-        driver.findElement(By.xpath("(//input[@id='Email'])[1]")).sendKeys("Joeblack@email.com");
+        type(By.xpath("(//input[@id='Email'])[1]"), "Joeblack@email.com");
 
-        driver.findElement(By.xpath("(//input[@id='Password'])[1]")).click();
-        driver.findElement(By.xpath("(//input[@id='Password'])[1]")).clear();
-        driver.findElement(By.xpath("(//input[@id='Password'])[1]")).sendKeys("Joeblack1234.");
+        type(By.xpath("(//input[@id='Password'])[1]"), "Joeblack1234.");
 
         driver.findElement(By.cssSelector("input[value='Log in']")).click();
 
