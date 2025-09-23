@@ -2,11 +2,13 @@ package com.onlineshop.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.List;
 
 public class TestBase {
 
@@ -63,6 +65,7 @@ public class TestBase {
     }
 
     public void clickOnRegistrationLink() {
+
         driver.findElement(By.cssSelector("[href='/register']")).click();
     }
 
@@ -70,7 +73,41 @@ public class TestBase {
         return elementPresent(By.xpath("//a[normalize-space()='Log out']"));
     }
 
+    public void fillLoginForm(User user) {
+        type(By.xpath("(//input[@id='Email'])[1]"), user.email());
+
+        type(By.xpath("(//input[@id='Password'])[1]"), user.password());
+    }
+
     public void clickOnLoginLink() {
         driver.findElement(By.cssSelector("[href=\"/login\"]")).click();
+    }
+
+    public void clickOnLoginButton() {
+        driver.findElement(By.cssSelector("input[value='Log in']")).click();
+    }
+
+    public void fillCartAdd() {
+        driver.findElement(By.cssSelector("div[class='product-item'] a[title='Show details for 14.1-inch Laptop']")).click();
+        clickOnAddCartButton();
+    }
+
+    public void clickOnAddCartButton() {
+        driver.findElement(By.xpath("(//input[@id='add-to-cart-button-31'])[1]")).click();
+    }
+
+    public boolean isContactAdded(String text) {
+        List<WebElement> contacs = driver.findElements(By.cssSelector("p[class='content'] a"));
+        for (WebElement element : contacs) {
+            if (element.getText().contains(text))
+                return true;
+        }
+        return false;
+    }
+
+    public void deleteContact() {
+        driver.findElement(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']")).click();
+        driver.findElement(By.xpath("//input[@name='removefromcart']")).click();
+        driver.findElement(By.cssSelector("input[value='Update shopping cart']")).click();
     }
 }
