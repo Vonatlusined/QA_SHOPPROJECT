@@ -9,6 +9,7 @@ public class User {
         return password;
     }
 
+
     public User setEmail(String email) {
         this.email = email;
         return this;
