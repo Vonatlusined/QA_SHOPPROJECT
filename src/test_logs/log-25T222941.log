@@ -1,0 +1,7 @@
+22:29:41.753 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\magom\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+22:29:44.519 [main] INFO  com.onlineshop.test.TestBase -- Start testdeleteCart
+22:29:48.485 [main] INFO  com.onlineshop.test.TestBase -- PASSED: deleteCart
+22:29:48.485 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+22:29:48.485 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

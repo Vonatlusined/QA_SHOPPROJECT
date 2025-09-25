@@ -1,0 +1,19 @@
+23:14:21.612 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\magom\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+23:14:24.458 [main] INFO  com.onlineshop.test.TestBase -- Start testnewUserRegistrationFromDataProviderPositiveTest
+23:14:37.485 [main] ERROR com.onlineshop.test.TestBase -- FAILED: newUserRegistrationFromDataProviderPositiveTest Screenshot path: D:\java\cohort65_QA\QA_SHOPPROJECT\screenshots\screen1758834877464.png
+23:14:37.485 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+23:14:37.485 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+23:14:40.094 [main] INFO  com.onlineshop.test.TestBase -- Start testnewUserRegistrationFromDataProviderPositiveTest
+23:14:42.993 [main] INFO  com.onlineshop.test.TestBase -- PASSED: newUserRegistrationFromDataProviderPositiveTest
+23:14:42.993 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+23:14:42.993 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+23:14:45.330 [main] INFO  com.onlineshop.test.TestBase -- Start testnewUserRegistrationFromDataProviderPositiveTest
+23:14:48.215 [main] INFO  com.onlineshop.test.TestBase -- PASSED: newUserRegistrationFromDataProviderPositiveTest
+23:14:48.216 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+23:14:48.216 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+23:14:51.387 [main] INFO  com.onlineshop.test.TestBase -- Start testnewUserRegistrationFromDataProviderPositiveTest
+23:14:54.355 [main] INFO  com.onlineshop.test.TestBase -- PASSED: newUserRegistrationFromDataProviderPositiveTest
+23:14:54.355 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+23:14:54.356 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

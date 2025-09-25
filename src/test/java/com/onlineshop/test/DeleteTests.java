@@ -1,23 +1,24 @@
 package com.onlineshop.test;
 
-import org.openqa.selenium.By;
+import com.shop.data.UserData;
+import com.shop.models.User;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class DeleteTests extends TestBase{
+public class DeleteTests extends TestBase {
     @BeforeMethod
-    public void precondition(){
-        clickOnLoginLink();
-        fillLoginForm(new User("Joeblack@email.com", "Joeblack1234."));
-        clickOnLoginButton();
-        driver.findElement(By.cssSelector("div[class='product-item'] a[title='Show details for 14.1-inch Laptop']")).click();
-        clickOnAddCartButton();
+    public void precondition() {
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillLoginForm(new User().setEmail(UserData.EMAIL).setPassword(UserData.PASSWORD));
+        app.getUser().clickOnLoginButton();
+        app.getCart().fillCartAdd();
     }
+
     @Test
-    public void deleteCart (){
-        deleteContact();
+    public void deleteCart() {
+        app.getCart().deleteCart();
     }
 
 
-    }
+}
 

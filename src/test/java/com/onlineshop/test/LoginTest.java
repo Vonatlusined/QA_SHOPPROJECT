@@ -1,22 +1,28 @@
 package com.onlineshop.test;
 
-import org.openqa.selenium.By;
+import com.shop.data.UserData;
+import com.shop.models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
     @Test
     public void LoginPositiveTest() {
-        clickOnLoginLink();
-        fillLoginForm(new User("Joeblack@email.com", "Joeblack1234."));
-        clickOnLoginButton();
-        Assert.assertTrue(elementPresent(By.xpath("(//a[normalize-space()='Log out'])[1]")));
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillLoginForm((new User()
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD)));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isSignOutButton());
     }
-    @Test
+
+    @Test()
     public void LoginNegativeTest() {
-        clickOnLoginLink();
-        fillLoginForm(new User("Joeblack@email.com", "Joeblack1234."));
-        clickOnLoginButton();
-        Assert.assertTrue(elementPresent(By.xpath("(//a[normalize-space()='Log out'])[1]")));
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillLoginForm(new User().setPassword(UserData.PASSWORD));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().elementPresent(isErrorMessage()));
+
     }
+
 }

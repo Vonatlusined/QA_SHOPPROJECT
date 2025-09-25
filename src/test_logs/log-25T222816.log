@@ -1,0 +1,7 @@
+22:28:17.362 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\magom\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+22:28:20.838 [main] INFO  com.onlineshop.test.TestBase -- Start testdeleteCart
+22:28:34.987 [main] ERROR com.onlineshop.test.TestBase -- FAILED: deleteCart Screenshot path: D:\java\cohort65_QA\QA_SHOPPROJECT\screenshots\screen1758832114965.png
+22:28:34.988 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+22:28:34.988 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

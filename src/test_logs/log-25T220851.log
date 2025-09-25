@@ -1,0 +1,7 @@
+22:08:52.411 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\magom\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+22:08:55.176 [main] INFO  com.onlineshop.test.TestBase -- Start testhomeComponentPresentTest
+22:08:55.262 [main] INFO  com.onlineshop.test.TestBase -- PASSED: homeComponentPresentTest
+22:08:55.262 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+22:08:55.262 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

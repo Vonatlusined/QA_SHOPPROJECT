@@ -1,0 +1,7 @@
+22:55:18.298 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\magom\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+22:55:21.388 [main] INFO  com.onlineshop.test.TestBase -- Start testexistUserRegistrationNegativeTest
+22:55:23.615 [main] INFO  com.onlineshop.test.TestBase -- PASSED: existUserRegistrationNegativeTest
+22:55:23.617 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+22:55:23.617 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

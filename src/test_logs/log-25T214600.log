@@ -1,0 +1,27 @@
+21:46:01.318 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  D:\java\cohort65_QA\QA_SHOPPROJECT\src\test\resources\smoky.xml
+
+21:46:04.522 [main] INFO  com.onlineshop.test.TestBase -- Start testhomeComponentPresentTest
+21:46:04.655 [main] INFO  com.onlineshop.test.TestBase -- PASSED: homeComponentPresentTest
+21:46:04.655 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:04.655 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+21:46:10.018 [main] INFO  com.onlineshop.test.TestBase -- Start testexistUserRegistrationNegativeTest
+21:46:12.614 [main] INFO  com.onlineshop.test.TestBase -- PASSED: existUserRegistrationNegativeTest
+21:46:12.616 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:12.616 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+21:46:15.378 [main] INFO  com.onlineshop.test.TestBase -- Start testLoginNegativeTest
+21:46:16.582 [main] INFO  com.onlineshop.test.TestBase -- PASSED: LoginNegativeTest
+21:46:16.582 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:16.582 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+21:46:19.240 [main] INFO  com.onlineshop.test.TestBase -- Start testLoginPositiveTest
+21:46:21.137 [main] INFO  com.onlineshop.test.TestBase -- PASSED: LoginPositiveTest
+21:46:21.137 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:21.137 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+21:46:23.604 [main] INFO  com.onlineshop.test.TestBase -- Start testaddToCartPositveTest
+21:46:28.119 [main] INFO  com.onlineshop.test.TestBase -- PASSED: addToCartPositveTest
+21:46:28.120 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:28.120 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************
+21:46:31.276 [main] INFO  com.onlineshop.test.TestBase -- Start testdeleteCart
+21:46:44.411 [main] ERROR com.onlineshop.test.TestBase -- FAILED: deleteCart Screenshot path: D:\java\cohort65_QA\QA_SHOPPROJECT\screenshots\screen1758829604392.png
+21:46:44.412 [main] INFO  com.onlineshop.test.TestBase -- Stop test
+21:46:44.412 [main] INFO  com.onlineshop.test.TestBase -- ********************************************************

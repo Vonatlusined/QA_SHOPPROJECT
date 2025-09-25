@@ -1,4 +1,4 @@
-package com.onlineshop.test;
+package com.shop.models;
 
 public class User {
     public String getEmail() {
